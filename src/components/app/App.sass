@@ -1,0 +1,93 @@
+@import "../style/_vars.sass"
+
+// td, th
+// 	border: 1px solid $blue
+
+// table
+// 	border-collapse: collapse
+// 	width: 100%
+
+.dayListItem
+	margin: 15px 0px
+
+.dayList > li:first-child
+	border-top: 1px solid #ccc
+
+.dayList
+	text-decoration: none
+	margin: 15px 0px
+	padding: 0
+	li
+		width: 100%
+		min-height: 20px
+		border:
+			bottom: 1px solid #ccc
+			left: 1px solid #ccc
+			right: 1px solid #ccc
+		display: table
+		border-collapse: collapse
+		&.active
+			border: 1px solid $blue
+
+		span
+			display: table-cell
+			border-left: 1px solid #ccc
+			height: 100%
+
+			&:first-child
+				border-left: none
+			&.place
+				width: 35%
+			&.time
+				width: 15%
+			&.activity
+				width: 50%
+			&.name
+				width: 100%
+				background-color: $pink
+				color: $white
+				padding: 7px
+			textarea
+				width: 90%
+				border: none
+
+.sheduleMenu
+	width: 100%
+	display: none
+	position: relative
+	&.active
+		display: block
+	// &::before
+	// 	content: ''
+	// 	display: table-cell
+
+	ul
+		display: block
+		text-align: right
+		background-color: #eee
+		li
+			width: auto
+			border: none
+			display: inline-block
+			padding: 2px 5px
+			a
+				display: block
+				padding: 3px 8px
+				border: 1px solid $blue
+				border-radius: 4px
+				text-decoration: none
+				color: $white
+				background-color: $blue
+				transition: background-color .5s ease, color .5s ease
+				&:focus, &:hover
+					text-decoration: none
+					color: $white
+				&:hover
+					background-color: $white
+					color: $blue
+				&:active
+					background-color: $white
+					color: $blue
+
+			&:first-child
+				float: left
